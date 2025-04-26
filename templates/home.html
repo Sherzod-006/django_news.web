@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breaking News</title>
+  </head>
+  <body>
+    <h1>Breaking News</h1>
+    <ul>
+      {% for article in object_list %}
+      <li>
+        <h1>{{ article.title }}</h1>
+        <br />
+        <h3>{{article.content}}</h3>
+        <br />
+        <h4>Added in: {{ article.created_at }}</h4>
+        <br />
+      </li>
+      {% endfor %}
+    </ul>
+    <footer>
+      <p>&copy; 2025 Breaking News</p>
+    </footer>
+  </body>
+</html>
